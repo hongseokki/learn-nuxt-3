@@ -57,12 +57,8 @@
 </template>
 
 <script setup lang="ts">
-
-import AppCard from "~/componets/app-card.vue"
-import VideoPlayer from "~/componets/video-player.vue"
-
-const route = useRoute()
-console.log('route.params.courseSlug:::',route.params.courseSlug)
+import AppCard from "~/componets/AppCard.vue"
+import VideoPlayer from "~/componets/VideoPlayer.vue"
 </script>
 
 <style scoped></style>

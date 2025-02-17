@@ -8,7 +8,7 @@
     </div>
     <div class="row q-col-gutter-lg">
       <div v-for="n in 3" :key="n" class="col-12 col-md-4 col-sm-6">
-        <CorseCard/>
+        <CourseCard/>
       </div>
     </div>
   </q-page>
@@ -16,7 +16,7 @@
 
 <script setup lang="ts">
 
-import CorseCard from "~/componets/corse-card.vue"
+import CourseCard from "~/componets/CourseCard.vue"
 </script>
 
 <style scoped>
