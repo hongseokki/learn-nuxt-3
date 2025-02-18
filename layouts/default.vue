@@ -6,9 +6,12 @@
         <q-btn stretch flat label="Home" to="/" />
         <q-separator dark vertical />
         <q-btn stretch flat label="About" to="/about" />
+        {{ disableBtn }}
+        <q-btn stretch flat label="Test" @click="test" />
       </q-toolbar>
     </q-header>
     <q-page-container :style="pageContainerStyle">
+      <div class="q-pa-md" :class="{ test: disableBtn }"></div>
       <slot></slot>
     </q-page-container>
   </q-layout>
@@ -18,4 +21,9 @@ const pageContainerStyle = computed(() => ({
   maxWidth: '1080px',
   margin: '0 auto',
 }))
+
+const disableBtn = ref(false)
+function test() {
+  disableBtn.value = !disableBtn.value
+}
 </script>
