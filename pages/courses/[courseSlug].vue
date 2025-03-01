@@ -74,10 +74,13 @@ const route = useRoute()
 const courseSlug = route.params.courseSlug as string
 const { course, prevCourse, nextCourse } = useCourse(courseSlug)
 definePageMeta({
-  // key: (route) => route.fullPath,
+  key: (route) => route.fullPath,
+  title: 'My Homepage',
+  pageType: '',
 })
 
 console.log('[courseSlug].vue 컨포넌트 setup hook')
+console.log('route.meta', route.meta)
 </script>
 
 <style scoped></style>
